@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SparkClean FM</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles if needed, or to define colors like navy-blue if not in default Tailwind */
+        .text-navy-blue { color: #001f3f; } /* Example color */
+        .bg-navy-blue { background-color: #001f3f; }
+        /* Add any other custom styles here if Tailwind's JIT mode isn't picking them up from class names alone */
+        .hidden { display: none; } /* Ensure hidden class works */
+    </style>
+</head>
+<body>
+
+<div class="flex min-h-screen flex-col">
+    <header class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div class="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
+            <a href="/" class="flex items-center gap-2">
+                <img alt="SparkClean FM Logo" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" class="h-10 w-10" src="/placeholder.svg?height=40&width=40&text=Logo" style="color: transparent;">
+                <span class="font-bold text-xl text-navy-blue">SparkClean FM</span>
+            </a>
+            <nav class="hidden md:flex gap-6">
+                <a href="#about" class="text-sm font-medium hover:text-primary">About Us</a>
+                <a href="#services" class="text-sm font-medium hover:text-primary">Services</a>
+                <a href="#areas" class="text-sm font-medium hover:text-primary">Areas</a>
+                <a href="#testimonials" class="text-sm font-medium hover:text-primary">Testimonials</a>
+                <a href="#gallery" class="text-sm font-medium hover:text-primary">Gallery</a>
+                <a href="#contact" class="text-sm font-medium hover:text-primary">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="tel:01234567890" class="hidden md:flex items-center gap-2 text-sm font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-4 w-4"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <span>01234 567890</span>
+                </a>
+                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 bg-green-600 hover:bg-green-700">Get a Free Quote</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1">
+        <section class="relative h-[600px] md:h-[700px] overflow-hidden">
+            <div class="absolute inset-0 bg-black/50 z-10"></div>
+            <img alt="Professional cleaning staff" decoding="async" data-nimg="fill" class="object-cover" src="/placeholder.svg?height=700&width=1920&text=Hero+Image" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+            <div class="container mx-auto relative z-20 h-full flex flex-col justify-center text-white px-4 md:px-6">
+                <h1 class="text-3xl md:text-5xl font-bold max-w-3xl mb-6">Reliable Cleaning & Facilities Management Services Across Lancashire & West Yorkshire</h1>
+                <div class="flex flex-col md:flex-row gap-4 mb-8">
+                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-lg">Domestic & Commercial Cleaning</span></div>
+                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-lg">Property Maintenance & Renovations</span></div>
+                    <div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-check-big h-5 w-5 text-green-400"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><path d="m9 11 3 3L22 4"></path></svg><span class="text-lg">End-to-End Facilities Management</span></div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-11 rounded-md px-8 bg-green-600 hover:bg-green-700">Get a Free Quote</button>
+                    <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border hover:text-accent-foreground h-11 rounded-md px-8 bg-white/10 text-white border-white hover:bg-white/20">Call Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="max-w-3xl mx-auto text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-navy-blue">Your Local Experts in Cleaning & Property Management</h2>
+                    <p class="text-lg text-gray-700 mb-6">Established in Blackburn, SparkClean FM Ltd has been providing exceptional cleaning and facilities management services across Lancashire & West Yorkshire. Our mission is to deliver purpose-fit, responsive, and trustworthy property care services to both domestic and commercial clients.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
+                        <div class="p-4 bg-white rounded-lg shadow-sm"><h3 class="font-semibold text-navy-blue mb-2">Reliability</h3><p class="text-sm text-gray-600">We show up when promised and deliver consistent results</p></div>
+                        <div class="p-4 bg-white rounded-lg shadow-sm"><h3 class="font-semibold text-navy-blue mb-2">Integrity</h3><p class="text-sm text-gray-600">Honest pricing and transparent communication</p></div>
+                        <div class="p-4 bg-white rounded-lg shadow-sm"><h3 class="font-semibold text-navy-blue mb-2">Quality</h3><p class="text-sm text-gray-600">Attention to detail in every job, big or small</p></div>
+                        <div class="p-4 bg-white rounded-lg shadow-sm"><h3 class="font-semibold text-navy-blue mb-2">Flexibility</h3><p class="text-sm text-gray-600">Tailored solutions to meet your specific needs</p></div>
+                    </div>
+                    <div class="mt-8 p-4 bg-navy-blue/5 rounded-lg inline-block"><p class="text-sm text-gray-700">All our staff are fully trained, Health & Safety certified, COSHH aware, and DBS-checked for your peace of mind.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-navy-blue">Tailored Solutions for Every Cleaning & Property Needs</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">We offer comprehensive services to keep your property clean, well-maintained, and functioning at its best.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col h-full"><div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-spray-can h-8 w-8 text-green-600"><path d="M3 3h.01"></path><path d="M7 5h.01"></path><path d="M11 7h.01"></path><path d="M3 7h.01"></path><path d="M7 9h.01"></path><path d="M3 11h.01"></path><rect width="4" height="4" x="15" y="5"></rect><path d="m19 9 2 2v10c0 .6-.4 1-1 1h-6c-.6 0-1-.4-1-1V11l2-2"></path><path d="m13 14 8-2"></path><path d="m13 19 8-2"></path></svg></div><h3 class="text-xl font-semibold mb-4 text-navy-blue">Cleaning Services</h3><ul class="space-y-3 mb-6 flex-grow"><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Domestic & Commercial Cleaning</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Deep Cleans / End-of-Tenancy Cleaning</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Builders Cleans / After-Renovation Cleans</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Carpet & Upholstery Cleaning</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Regular Office Cleaning Contracts</span></li></ul><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background h-10 px-4 py-2 mt-auto w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white">Learn More</button></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col h-full"><div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-tool h-8 w-8 text-green-600"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"></path><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"></path><path d="m2.3 2.3 7.286 7.286"></path><circle cx="11" cy="11" r="2"></circle></svg></div><h3 class="text-xl font-semibold mb-4 text-navy-blue">Facilities Management</h3><ul class="space-y-3 mb-6 flex-grow"><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Reactive & Planned Maintenance</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Grounds Maintenance & Landscaping</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Electrical, Plumbing & HVAC Services</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Fire Safety Checks & Compliance</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Security Systems Management</span></li></ul><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background h-10 px-4 py-2 mt-auto w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white">Learn More</button></div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col h-full"><div class="mb-4"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-paint-bucket h-8 w-8 text-green-600"><path d="m19 11-8-8-8.6 8.6a2 2 0 0 0 0 2.8l5.2 5.2c.8.8 2 .8 2.8 0L19 11Z"></path><path d="m5 2 5 5"></path><path d="M2 13h15"></path><path d="M22 20a2 2 0 1 1-4 0c0-1.6 1.7-2.4 2-4 .3 1.6 2 2.4 2 4Z"></path></svg></div><h3 class="text-xl font-semibold mb-4 text-navy-blue">Property Renovation</h3><ul class="space-y-3 mb-6 flex-grow"><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Refurbishment & Renovation Projects</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Painting & Decorating</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Flooring, Kitchens, and Bathrooms</span></li><li class="flex items-start gap-2"><span class="text-green-600 font-bold text-lg leading-tight">•</span><span class="text-gray-700">Void Property Refits</span></li></ul><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background h-10 px-4 py-2 mt-auto w-full border-green-600 text-green-600 hover:bg-green-600 hover:text-white">Learn More</button></div>
+                </div>
+                <div class="mt-12 text-center"><p class="text-gray-700 italic">All works carried out by vetted, qualified professionals.</p><button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 mt-6 bg-green-600 hover:bg-green-700">View All Services <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right ml-2 h-4 w-4"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button></div>
+            </div>
+        </section>
+
+        <section id="areas" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-navy-blue">Proudly Serving Blackburn and Beyond</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Our services extend throughout Lancashire and West Yorkshire, providing quality cleaning and facilities management.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <h3 class="font-semibold text-navy-blue mb-3">Lancashire</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Blackburn (Head Office)</span></li>
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Preston</span></li>
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Burnley</span></li>
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Accrington</span></li>
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Bolton</span></li>
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Bury</span></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-navy-blue mb-3">West Yorkshire</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Bradford</span></li>
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Leeds</span></li>
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Wakefield</span></li>
+                                    <li class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-4 w-4 text-green-600"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><span>Halifax</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-4 bg-white rounded-lg shadow-sm">
+                            <h3 class="font-semibold text-navy-blue mb-2">Check if we cover your area</h3>
+                            <div class="flex gap-2">
+                                <input id="postcodeInput" placeholder="Enter your postcode" class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm" type="text">
+                                <button id="checkAreaButton" class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 bg-green-600 hover:bg-green-700">Check</button>
+                            </div>
+                            <p id="areaCheckResult" class="text-sm mt-2"></p>
+                        </div>
+                    </div>
+                    <div class="h-[400px] relative rounded-lg overflow-hidden shadow-md">
+                        <img alt="Service area map" loading="lazy" decoding="async" data-nimg="fill" class="object-cover" src="/placeholder.svg?height=400&width=600&text=Service+Area+Map" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-navy-blue">What Our Clients Say</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Don't just take our word for it - hear from our satisfied customers across Lancashire and West Yorkshire.</p>
+                </div>
+                <div class="relative">
+                    <div class="flex justify-between items-center mb-6">
+                        <h3 class="font-semibold text-xl text-navy-blue">Customer Testimonials</h3>
+                        <div class="flex gap-2">
+                            <button id="prevTestimonialButton" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-left h-4 w-4"><path d="m15 18-6-6 6-6"></path></svg>
+                                <span class="sr-only">Previous</span>
+                            </button>
+                            <button id="nextTestimonialButton" class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right h-4 w-4"><path d="m9 18 6-6-6-6"></path></svg>
+                                <span class="sr-only">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div id="testimonialContainer" class="relative min-h-[250px]"> <!-- Adjusted for single item display -->
+                        <div class="testimonial-item bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col h-full">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img alt="Sarah" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" class="rounded-full" src="/placeholder.svg?height=80&width=80&text=Sarah" style="color: transparent;">
+                                <div><h4 class="font-medium">Sarah</h4><p class="text-sm text-gray-600">Burnley</p></div>
+                            </div>
+                            <div class="flex mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <p class="text-gray-700 italic flex-grow">Fantastic end-of-tenancy clean – my landlord was impressed! The team was thorough and professional.</p>
+                        </div>
+                        <div class="testimonial-item bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col h-full hidden">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img alt="John" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" class="rounded-full" src="/placeholder.svg?height=80&width=80&text=John" style="color: transparent;">
+                                <div><h4 class="font-medium">John</h4><p class="text-sm text-gray-600">Blackburn</p></div>
+                            </div>
+                            <div class="flex mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <p class="text-gray-700 italic flex-grow">We use SparkClean for our office weekly cleaning and they never disappoint. Reliable and thorough every time.</p>
+                        </div>
+                        <div class="testimonial-item bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex flex-col h-full hidden">
+                            <div class="flex items-center gap-4 mb-4">
+                                <img alt="Emma" loading="lazy" width="50" height="50" decoding="async" data-nimg="1" class="rounded-full" src="/placeholder.svg?height=80&width=80&text=Emma" style="color: transparent;">
+                                <div><h4 class="font-medium">Emma</h4><p class="text-sm text-gray-600">Leeds</p></div>
+                            </div>
+                            <div class="flex mb-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="yellow" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-yellow-400"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star h-4 w-4 text-gray-300"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            </div>
+                            <p class="text-gray-700 italic flex-grow">Had my carpets cleaned after a spillage and they look brand new. Prompt service and reasonable prices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 flex justify-center gap-8 flex-wrap">
+                    <img alt="Client logo" loading="lazy" width="120" height="60" decoding="async" data-nimg="1" class="grayscale hover:grayscale-0 transition-all duration-300" src="/placeholder.svg?height=60&width=120&text=Client+1" style="color: transparent;">
+                    <img alt="Client logo" loading="lazy" width="120" height="60" decoding="async" data-nimg="1" class="grayscale hover:grayscale-0 transition-all duration-300" src="/placeholder.svg?height=60&width=120&text=Client+2" style="color: transparent;">
+                    <img alt="Client logo" loading="lazy" width="120" height="60" decoding="async" data-nimg="1" class="grayscale hover:grayscale-0 transition-all duration-300" src="/placeholder.svg?height=60&width=120&text=Client+3" style="color: transparent;">
+                    <img alt="Client logo" loading="lazy" width="120" height="60" decoding="async" data-nimg="1" class="grayscale hover:grayscale-0 transition-all duration-300" src="/placeholder.svg?height=60&width=120&text=Client+4" style="color: transparent;">
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-navy-blue">Gallery / Before & After</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">See the difference our professional services can make to your property.</p>
+                </div>
+                <div class="space-y-8">
+                    <div class="gallery-item bg-white rounded-lg shadow-sm overflow-hidden" 
+                         data-before-src="/placeholder.svg?height=300&width=400&text=Kitchen+BEFORE" 
+                         data-after-src="/placeholder.svg?height=300&width=400&text=Kitchen+AFTER">
+                        <div class="p-4 border-b">
+                            <h3 class="font-semibold text-lg text-navy-blue">Kitchen Deep Clean</h3>
+                            <p class="text-sm text-gray-600">Complete kitchen deep clean including appliances, cabinets, and floors.</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex gap-2 mb-4">
+                                <button class="gallery-before-btn gallery-btn inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">Before</button>
+                                <button class="gallery-after-btn gallery-btn active-gallery-btn inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-9 rounded-md px-3 bg-green-600 hover:bg-green-700">After</button>
+                            </div>
+                            <div class="relative h-[300px] rounded-md overflow-hidden">
+                                <img alt="Kitchen Deep Clean" loading="lazy" decoding="async" data-nimg="fill" class="gallery-image object-cover transition-all duration-500" src="/placeholder.svg?height=300&width=400&text=Kitchen+AFTER" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                                <div class="gallery-image-caption absolute bottom-0 left-0 bg-black/70 text-white px-3 py-1 text-sm rounded-tr-md">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item bg-white rounded-lg shadow-sm overflow-hidden"
+                         data-before-src="/placeholder.svg?height=300&width=400&text=Bathroom+BEFORE" 
+                         data-after-src="/placeholder.svg?height=300&width=400&text=Bathroom+AFTER">
+                        <div class="p-4 border-b">
+                            <h3 class="font-semibold text-lg text-navy-blue">Bathroom Renovation</h3>
+                            <p class="text-sm text-gray-600">Full bathroom renovation with new fixtures, tiling, and decoration.</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex gap-2 mb-4">
+                                <button class="gallery-before-btn gallery-btn inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">Before</button>
+                                <button class="gallery-after-btn gallery-btn active-gallery-btn inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-9 rounded-md px-3 bg-green-600 hover:bg-green-700">After</button>
+                            </div>
+                            <div class="relative h-[300px] rounded-md overflow-hidden">
+                                <img alt="Bathroom Renovation" loading="lazy" decoding="async" data-nimg="fill" class="gallery-image object-cover transition-all duration-500" src="/placeholder.svg?height=300&width=400&text=Bathroom+AFTER" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                                <div class="gallery-image-caption absolute bottom-0 left-0 bg-black/70 text-white px-3 py-1 text-sm rounded-tr-md">After</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item bg-white rounded-lg shadow-sm overflow-hidden"
+                         data-before-src="/placeholder.svg?height=300&width=400&text=Carpet+BEFORE" 
+                         data-after-src="/placeholder.svg?height=300&width=400&text=Carpet+AFTER">
+                        <div class="p-4 border-b">
+                            <h3 class="font-semibold text-lg text-navy-blue">Office Carpet Cleaning</h3>
+                            <p class="text-sm text-gray-600">Commercial carpet cleaning for a busy office space.</p>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex gap-2 mb-4">
+                                <button class="gallery-before-btn gallery-btn inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 rounded-md px-3">Before</button>
+                                <button class="gallery-after-btn gallery-btn active-gallery-btn inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-9 rounded-md px-3 bg-green-600 hover:bg-green-700">After</button>
+                            </div>
+                            <div class="relative h-[300px] rounded-md overflow-hidden">
+                                <img alt="Office Carpet Cleaning" loading="lazy" decoding="async" data-nimg="fill" class="gallery-image object-cover transition-all duration-500" src="/placeholder.svg?height=300&width=400&text=Carpet+AFTER" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                                <div class="gallery-image-caption absolute bottom-0 left-0 bg-black/70 text-white px-3 py-1 text-sm rounded-tr-md">After</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border bg-background h-10 px-4 py-2 border-navy-blue text-navy-blue hover:bg-navy-blue hover:text-white">View Full Gallery</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4 text-navy-blue">Let's Get to Work – Contact SparkClean Today</h2>
+                    <p class="text-lg text-gray-700 max-w-3xl mx-auto">Ready to experience the difference? Get in touch for a free, no-obligation quote.</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 items-start">
+                    <div>
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold text-navy-blue text-xl mb-4">Get in Touch</h3>
+                            <form class="space-y-4">
+                                <div><label for="name" class="block text-sm font-medium mb-1">Name</label><input class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" id="name" placeholder="Your name" required="" value="" name="name"></div>
+                                <div><label for="email" class="block text-sm font-medium mb-1">Email</label><input class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" id="email" placeholder="Your email address" required="" type="email" value="" name="email"></div>
+                                <div><label for="phone" class="block text-sm font-medium mb-1">Phone</label><input class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" id="phone" placeholder="Your phone number" required="" type="tel" value="" name="phone"></div>
+                                <div>
+                                    <label for="service" class="block text-sm font-medium mb-1">Service Needed</label>
+                                    <div class="relative">
+                                        <select id="service" name="service" class="flex h-10 w-full items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 appearance-none">
+                                            <option value="">Select a service</option>
+                                            <option value="domestic-cleaning">Domestic Cleaning</option>
+                                            <option value="commercial-cleaning">Commercial Cleaning</option>
+                                            <option value="end-of-tenancy">End of Tenancy Cleaning</option>
+                                            <option value="carpet-cleaning">Carpet & Upholstery Cleaning</option>
+                                            <option value="facilities-management">Facilities Management</option>
+                                            <option value="property-renovation">Property Renovation</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down h-4 w-4 opacity-50" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div><label for="message" class="block text-sm font-medium mb-1">Message</label><textarea class="flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50" id="message" name="message" placeholder="Tell us about your requirements" rows="4" required=""></textarea></div>
+                                <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 text-primary-foreground h-10 px-4 py-2 w-full bg-green-600 hover:bg-green-700" type="submit">Send Message</button>
+                                <p class="text-xs text-gray-500 text-center">By submitting this form, you agree to our privacy policy and terms of service.</p>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <h3 class="font-semibold text-navy-blue text-xl mb-4">Contact Information</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-5 w-5 text-green-600 mt-1"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><div><p class="font-medium">Phone</p><p class="text-gray-700">01234 567890</p></div></div>
+                                <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-5 w-5 text-green-600 mt-1"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg><div><p class="font-medium">Email</p><p class="text-gray-700">info@sparkcleanfm.co.uk</p></div></div>
+                                <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin h-5 w-5 text-green-600 mt-1"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg><div><p class="font-medium">Address</p><p class="text-gray-700">SparkClean FM Ltd, Business Centre, Blackburn, Lancashire, BB1 1AA</p></div></div>
+                                <div class="flex items-start gap-3"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock h-5 w-5 text-green-600 mt-1"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg><div><p class="font-medium">Office Hours</p><p class="text-gray-700">Monday to Saturday, 8am–6pm</p></div></div>
+                            </div>
+                        </div>
+                        <div class="h-[300px] relative rounded-lg overflow-hidden shadow-md">
+                            <img alt="Office location map" loading="lazy" decoding="async" data-nimg="fill" class="object-cover" src="/placeholder.svg?height=300&width=600&text=Office+Map" style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                        </div>
+                        <div class="flex gap-4">
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook h-5 w-5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg><span class="sr-only">Facebook</span></button>
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin h-5 w-5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg><span class="sr-only">LinkedIn</span></button>
+                            <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram h-5 w-5"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg><span class="sr-only">Instagram</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-navy-blue text-white py-12">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <img alt="SparkClean FM Logo" loading="lazy" width="40" height="40" decoding="async" data-nimg="1" class="h-10 w-10 bg-white rounded-full p-1" src="/placeholder.svg?height=40&width=40&text=Logo" style="color: transparent;">
+                        <span class="font-bold text-xl">SparkClean FM</span>
+                    </div>
+                    <p class="text-gray-300 text-sm">Providing reliable cleaning and facilities management services across Lancashire & West Yorkshire.</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="text-gray-300 hover:text-white text-sm">Home</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white text-sm">About</a></li>
+                        <li><a href="#services" class="text-gray-300 hover:text-white text-sm">Services</a></li>
+                        <li><a href="#areas" class="text-gray-300 hover:text-white text-sm">Areas</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white text-sm">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Commercial Cleaning</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Domestic Cleaning</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Facilities Management</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">Property Renovation</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-white text-sm">End of Tenancy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-lg mb-4">Accreditations</h3>
+                    <div class="flex flex-wrap gap-4">
+                        <img alt="Accreditation badge" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="bg-white rounded-full p-1" src="/placeholder.svg?height=60&width=60&text=Acc1" style="color: transparent;">
+                        <img alt="Accreditation badge" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="bg-white rounded-full p-1" src="/placeholder.svg?height=60&width=60&text=Acc2" style="color: transparent;">
+                        <img alt="Accreditation badge" loading="lazy" width="60" height="60" decoding="async" data-nimg="1" class="bg-white rounded-full p-1" src="/placeholder.svg?height=60&width=60&text=Acc3" style="color: transparent;">
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400">© 2025 SparkClean FM Ltd. All rights reserved.</p>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="/privacy-policy" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="/terms" class="text-sm text-gray-400 hover:text-white">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script defer>
+document.addEventListener('DOMContentLoaded', function () {
+    // 2a. Area Coverage Check
+    const postcodeInput = document.getElementById('postcodeInput');
+    const checkAreaButton = document.getElementById('checkAreaButton');
+    const areaCheckResult = document.getElementById('areaCheckResult');
+    // Example covered postcode prefixes (case-insensitive for the first part)
+    const coveredPostcodePrefixes = ["BB", "PR", "LS", "WF", "HX", "BD", "BL1", "M1", "OL1"]; 
+
+    if (checkAreaButton && postcodeInput && areaCheckResult) {
+        checkAreaButton.addEventListener('click', function () {
+            const postcode = postcodeInput.value.trim().toUpperCase();
+            if (!postcode) {
+                areaCheckResult.textContent = 'Please enter a postcode.';
+                areaCheckResult.className = 'text-sm mt-2 text-red-600';
+                return;
+            }
+
+            // Simple check: does the entered postcode start with any of the covered prefixes?
+            const userPrefixMatch = coveredPostcodePrefixes.some(prefix => postcode.startsWith(prefix));
+
+            if (userPrefixMatch) {
+                areaCheckResult.textContent = 'Great! We cover your area.';
+                areaCheckResult.className = 'text-sm mt-2 text-green-600';
+            } else {
+                areaCheckResult.textContent = 'Sorry, we do not currently cover this area. Please contact us for more details.';
+                areaCheckResult.className = 'text-sm mt-2 text-red-600';
+            }
+        });
+    }
+
+    // 2b. Carousel for Customer Testimonials
+    const testimonialContainer = document.getElementById('testimonialContainer');
+    const prevTestimonialButton = document.getElementById('prevTestimonialButton');
+    const nextTestimonialButton = document.getElementById('nextTestimonialButton');
+    
+    if (testimonialContainer && prevTestimonialButton && nextTestimonialButton) {
+        const testimonials = Array.from(testimonialContainer.getElementsByClassName('testimonial-item'));
+        let currentTestimonialIndex = 0;
+
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                if (i === index) {
+                    testimonial.classList.remove('hidden');
+                } else {
+                    testimonial.classList.add('hidden');
+                }
+            });
+        }
+
+        if (testimonials.length > 0) {
+            showTestimonial(currentTestimonialIndex); // Show initial testimonial
+
+            prevTestimonialButton.addEventListener('click', function () {
+                currentTestimonialIndex = (currentTestimonialIndex - 1 + testimonials.length) % testimonials.length;
+                showTestimonial(currentTestimonialIndex);
+            });
+
+            nextTestimonialButton.addEventListener('click', function () {
+                currentTestimonialIndex = (currentTestimonialIndex + 1) % testimonials.length;
+                showTestimonial(currentTestimonialIndex);
+            });
+        }
+    }
+    
+    // 2c. Gallery Before/After Button
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    // Classes for active/inactive buttons (based on your Tailwind setup)
+    const activeBtnClasses = ['bg-green-600', 'hover:bg-green-700', 'text-primary-foreground'];
+    const inactiveBtnClasses = ['border', 'border-input', 'bg-background', 'hover:bg-accent', 'hover:text-accent-foreground'];
+    // Note: text-primary-foreground often means white, bg-background can be white or light gray.
+    // For simplicity, let's define a clear inactive state if the above is too complex to toggle reliably:
+    const galleryActiveBtnBase = "text-white bg-green-600 hover:bg-green-700";
+    const galleryInactiveBtnBase = "text-gray-700 bg-gray-200 hover:bg-gray-300 border border-gray-300";
+
+
+    galleryItems.forEach(item => {
+        const beforeBtn = item.querySelector('.gallery-before-btn');
+        const afterBtn = item.querySelector('.gallery-after-btn');
+        const image = item.querySelector('.gallery-image');
+        const caption = item.querySelector('.gallery-image-caption');
+        const beforeSrc = item.dataset.beforeSrc;
+        const afterSrc = item.dataset.afterSrc;
+
+        if (!beforeBtn || !afterBtn || !image || !caption || !beforeSrc || !afterSrc) {
+            console.warn('Skipping gallery item due to missing elements or data attributes:', item);
+            return;
+        }
+        
+        // Standard button classes shared by both
+        const commonBtnClasses = "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-9 rounded-md px-3".split(" ");
+
+        function updateButtonStyles(activeButton, inactiveButton) {
+            // Remove all potentially conflicting classes first
+            activeButton.classList.remove(...galleryInactiveBtnBase.split(" "), ...inactiveBtnClasses);
+            inactiveButton.classList.remove(...galleryActiveBtnBase.split(" "), ...activeBtnClasses);
+            
+            // Add common classes if they were removed
+            commonBtnClasses.forEach(cls => {
+                if (!activeButton.classList.contains(cls)) activeButton.classList.add(cls);
+                if (!inactiveButton.classList.contains(cls)) inactiveButton.classList.add(cls);
+            });
+
+            // Add specific active/inactive classes
+            galleryActiveBtnBase.split(" ").forEach(cls => activeButton.classList.add(cls));
+            galleryInactiveBtnBase.split(" ").forEach(cls => inactiveButton.classList.add(cls));
+        }
+
+
+        beforeBtn.addEventListener('click', function() {
+            image.src = beforeSrc;
+            image.alt = image.alt.replace(' - after', ' - before').replace('After', 'Before');
+            caption.textContent = 'Before';
+            updateButtonStyles(beforeBtn, afterBtn);
+        });
+
+        afterBtn.addEventListener('click', function() {
+            image.src = afterSrc;
+            image.alt = image.alt.replace(' - before', ' - after').replace('Before', 'After');
+            caption.textContent = 'After';
+            updateButtonStyles(afterBtn, beforeBtn);
+        });
+
+        // Initial state: After is active
+        updateButtonStyles(afterBtn, beforeBtn);
+    });
+});
+</script>
+
+</body>
+</html>
